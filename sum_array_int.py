@@ -12,5 +12,5 @@ class Input(BaseModel):
 class Output(BaseModel):
     res: int
 
-def cleanup(input: Input) -> Output:
+def sum_array_int(input: Input) -> Output:
     return Output(res=sum(input.arr))

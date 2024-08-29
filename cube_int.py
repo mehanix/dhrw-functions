@@ -12,5 +12,5 @@ class Input(BaseModel):
 class Output(BaseModel):
     res: int
 
-def cleanup(input: Input) -> Output:
+def cube(input: Input) -> Output:
     return Output(res=input.val ** 3)
