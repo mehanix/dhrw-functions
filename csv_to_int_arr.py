@@ -14,6 +14,6 @@ class Output(BaseModel):
 
 def csv_to_int_arr(input: Input) -> Output:
     print(input.array)
-    line = input.array.split('\n')[1]
+    line = input.array.split('\\n')[1]
     tokens = [int(x.strip()) for x in lines.split(',')]
     return Output(ans=tokens)
