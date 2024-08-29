@@ -7,7 +7,7 @@ from pydantic.config import ConfigDict
 
 
 class Input(BaseModel):
-    array: String
+    array: str
 
 class Output(BaseModel):
     ans: List[Int]
