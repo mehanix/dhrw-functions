@@ -10,7 +10,7 @@ class Input(BaseModel):
     array: str
 
 class Output(BaseModel):
-    ans: List[Int]
+    ans: List[int]
 
 def csv_to_int_arr(input: Input) -> Output:
     line = input.array.split("\n")[1]
