@@ -11,7 +11,7 @@ class Input(BaseModel):
     csv_chunk: str
 
 class Output(BaseModel):
-    dataframe: pandas.core.frame.DataFrame
+    dataframe: pd.core.frame.DataFrame
 
 def filter_columns(data: Input) -> Output:
     COLUMNS = ['Date time', 'Temperature']
