@@ -26,4 +26,4 @@ def render_plot(input: Input) -> Output:
     plt.savefig(byte_stream, dpi=100, format='png')
     img_bytes = byte_stream.getvalue()
     b64 = b64encode(img_bytes)
-    return Output(base64_png: b64.decode())
+    return Output(base64_png=b64.decode())
