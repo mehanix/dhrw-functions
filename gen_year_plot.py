@@ -9,6 +9,7 @@ import random
 import dill
 from io import BytesIO
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 class Input(BaseModel):
