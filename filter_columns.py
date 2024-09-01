@@ -11,7 +11,7 @@ class Input(BaseModel):
     csv_chunk: str
 
 class Output(BaseModel):
-    dataframe: pd.core.frame.DataFrame
+    dataframe: dict
 
 def filter_columns(data: Input) -> Output:
     COLUMNS = ['Date time', 'Temperature']
@@ -19,4 +19,5 @@ def filter_columns(data: Input) -> Output:
     csv_io = StringIO(data.csv_chunk)
     df = pd.read_csv(csv_io)
     df_filtered = df[COLUMNS]
-    return Output(dataframe=df_filtered)
+    df_dict = df_filtered.to_dict()
+    return Output(dataframe=df_dict)
