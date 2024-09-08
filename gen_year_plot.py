@@ -16,7 +16,7 @@ class Input(BaseModel):
     dataframe: dict
 
 class Output(BaseModel):
-    serialized_fig: bytes
+    serialized_fig: bytes 
 
 def random_color():
     a = random.randint(0, 200)
