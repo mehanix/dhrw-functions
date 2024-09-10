@@ -16,7 +16,7 @@ class Input(BaseModel):
     dataframe: dict
 
 class Output(BaseModel):
-    summary_statistics: string 
+    summary_statistics: str 
 
 def gen_summary_statistics(input: Input) -> Output:
     # create dataframe and get year
