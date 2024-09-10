@@ -22,4 +22,5 @@ def gen_summary_statistics(input: Input) -> Output:
     # create dataframe and get year
     df = pd.DataFrame(input.dataframe)
     stats = df.describe().to_string()
+    print("Stats ", stats)
     return Output(summary_statistics=stats)
