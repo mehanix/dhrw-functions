@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 import pandas as pd
+import json
 
 class Input(BaseModel):
     dataframe: dict
