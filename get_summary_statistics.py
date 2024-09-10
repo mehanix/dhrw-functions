@@ -19,8 +19,7 @@ class Output(BaseModel):
     summary_statistics: str 
 
 def get_summary_statistics(input: Input) -> Output:
-    # create dataframe and get year
     df = pd.DataFrame(input.dataframe)
     city = df['Address'][2]
-    stats = "Summary statistics for:" + city + "\n" + df.describe().to_string()
+    stats = "Summary statistics for:" + city + " " + df.describe().to_string()
     return Output(summary_statistics=stats)
