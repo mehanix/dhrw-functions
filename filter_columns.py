@@ -14,8 +14,7 @@ class Output(BaseModel):
     dataframe: dict
 
 def filter_columns(data: Input) -> Output:
-    COLUMNS = ['Date time', 'Temperature']
-    
+    COLUMNS = ['Address', 'Date time', 'Temperature']
     csv_io = StringIO(data.csv_chunk)
     df = pd.read_csv(csv_io)
     df_filtered = df[COLUMNS]

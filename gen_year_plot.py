@@ -29,11 +29,12 @@ def gen_year_plot(input: Input) -> Output:
     # create dataframe and get year
     df = pd.DataFrame(input.dataframe)
     year = df['Date time'][0].split('/')[2]
+    city = df['Address'][2]
     # create figure and plot
     fig, ax = plt.subplots()
     df.plot(x='Date time', y='Temperature', figsize=(13, 8), \
             xlabel='Ziua', ylabel='Temperatura Medie', grid=True, \
-            title=f"Temperatura in {year} in Bucuresti", \
+            title=f"Temperatura in {year} in {city}", \
             kind='line', ax = ax, color=random_color())    
     # serialize to bytes and return
     byte_stream = BytesIO()
