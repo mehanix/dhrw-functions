@@ -18,7 +18,7 @@ class Input(BaseModel):
 class Output(BaseModel):
     summary_statistics: str 
 
-def gen_summary_statistics(input: Input) -> Output:
+def get_summary_statistics(input: Input) -> Output:
     # create dataframe and get year
     df = pd.DataFrame(input.dataframe)
     stats = df.describe().to_string()
